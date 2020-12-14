@@ -15,7 +15,14 @@
     .text{
       margin-top: 60px;
     }
-  </style>
+    .arbol-navidad{
+      margin-top: 70px; 
+      margin-left: 550px; 
+    }
+    .numeros{
+      margin-left: 100px; 
+    }
+    </style>
 </head>
 
 <body>
@@ -68,6 +75,32 @@
       </div>
     </div>
   </div>
+  <h1 class="arbol-navidad">Arbol de navidad</h1>
+ 
+  <script>
+    let numeros = [0,1]
+    let cadena = '1'
+    for(var i = 0; i<19; i++){
+        let item =Math.round(Math.random()*(1-0)+0)
+        console.log(item)
+        if(i === 7 || i === 13){
+          cadena=reserva
+        }
+         document.write(`
+         <h3 class="numeros" align="center">${cadena}</h3>
+         `)
+         cadena = cadena + numeros[item]
+         if(i === 4 || i === 10){
+           reserva = cadena
+         }
+         cadena = cadena + item
+   }
+   for(var i = 0; i<3; i++){
+    document.write(`
+         <h3 class="numeros" align="center">1010</h3>
+         `)
+   }
+  </script>
 </body>
 
 </html>
